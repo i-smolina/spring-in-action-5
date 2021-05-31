@@ -1,8 +1,8 @@
 package ru.smolina.controllers;
 
 import lombok.extern.slf4j.Slf4j;
-import ru.smolina.Ingredient;
-import ru.smolina.Ingredient.Type;
+import ru.smolina.domains.Ingredient;
+import ru.smolina.domains.Ingredient.Type;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
