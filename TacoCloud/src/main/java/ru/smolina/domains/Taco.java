@@ -1,5 +1,6 @@
 package ru.smolina.domains;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.validation.constraints.NotEmpty;
@@ -16,5 +17,8 @@ public class Taco {
 	private String name;
 	@NotNull
 	@Size(min = 1, message = "You must choose at least 1 ingredient")
-	private List<String> ingredients;
+	private List<Ingredient> ingredients;
+	
+	private long id;
+	private Date createdAt;
 }
