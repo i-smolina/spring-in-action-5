@@ -30,6 +30,13 @@
 		</br>
 		
 		<label for="street">Street address:</label>
+		<input type="text" th:field="*{street}"/>
+		  <span class="validationError"
+            th:if="${#fields.hasErrors('street')}"
+            th:errors="*{street}">Street Error</span>
+		</br>
+		
+		<label for="city">City:</label>
 		<input type="text" th:field="*{city}"/>
 		  <span class="validationError"
             th:if="${#fields.hasErrors('city')}"

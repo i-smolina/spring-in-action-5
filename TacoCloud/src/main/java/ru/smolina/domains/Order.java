@@ -1,7 +1,9 @@
 package ru.smolina.domains;
 
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
@@ -30,5 +32,11 @@ public class Order {
 	private String ccCVV;
 	
 	private Long id;
-	private Date createdAt;
+	private Date placedAt;
+	
+	private List<Taco> tacos = new ArrayList<>();
+	
+	public void addTaco(Taco taco) {
+		this.tacos.add(taco);
+	}
 }

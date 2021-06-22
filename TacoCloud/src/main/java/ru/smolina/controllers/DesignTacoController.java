@@ -81,15 +81,11 @@ public class DesignTacoController {
 	public String processDesign(@Valid @ModelAttribute("design") Taco design, Errors errors, @ModelAttribute Order order) {
 		System.out.println(errors.getAllErrors());
 		if (errors.hasErrors())
-			return "design";
-		
-	
+			return "design";	
 		
 		Taco saved = tacoRepo.save(design);
+		order.addTaco(saved);
 		
-
-		log.info("Processing design ... " + design);
-
 		return "redirect:/orders/current";
 	}
 
