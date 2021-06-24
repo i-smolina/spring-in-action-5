@@ -3,10 +3,10 @@ package ru.smolina.controllers;
 import lombok.extern.slf4j.Slf4j;
 import ru.smolina.domains.Ingredient;
 import ru.smolina.domains.Ingredient.Type;
+import ru.smolina.repositories.jdbc.IngredientRepository;
+import ru.smolina.repositories.jdbc.TacoRepository;
 import ru.smolina.domains.Order;
 import ru.smolina.domains.Taco;
-import ru.smolina.repositories.IngredientRepository;
-import ru.smolina.repositories.TacoRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

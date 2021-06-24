@@ -15,7 +15,7 @@ import org.springframework.web.bind.support.SessionStatus;
 
 import lombok.extern.slf4j.Slf4j;
 import ru.smolina.domains.Order;
-import ru.smolina.repositories.OrderRepository;
+import ru.smolina.repositories.jdbc.OrderRepository;
 
 @Slf4j
 @Controller

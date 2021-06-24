@@ -1,4 +1,4 @@
-package ru.smolina.repositories;
+package ru.smolina.repositories.jdbc;
 
 import java.sql.Timestamp;
 import java.sql.Types;

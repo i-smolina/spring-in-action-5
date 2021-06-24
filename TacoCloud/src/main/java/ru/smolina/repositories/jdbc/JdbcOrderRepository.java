@@ -1,4 +1,4 @@
-package ru.smolina.repositories;
+package ru.smolina.repositories.jdbc;
 
 import java.util.Date;
 import java.util.HashMap;

@@ -5,7 +5,7 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
 import ru.smolina.domains.Ingredient;
-import ru.smolina.repositories.IngredientRepository;
+import ru.smolina.repositories.jdbc.IngredientRepository;
 
 @Component
 public class IngredientByIdConverter implements Converter<String, Ingredient> {	
