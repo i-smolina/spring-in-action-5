@@ -9,9 +9,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
 
 import lombok.Data;
 
@@ -31,6 +35,16 @@ public class Taco {
 	@Size(min = 1, message = "You must choose at least 1 ingredient")
 	private List<Ingredient> ingredients;
 	
-	@NotNull
-	private Date createdAt;
+	private Date createdat;
+	
+	@PrePersist
+	public void createdAt() {
+		this.createdat = new Date();
+		 System.out.println("@PrePersist");
+	}
+	
+	 @PreUpdate
+	    public void preUpdate() {
+		 this.createdat = new Date();
+	    }
 }

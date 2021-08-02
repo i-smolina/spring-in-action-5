@@ -3,8 +3,8 @@ package ru.smolina.controllers;
 import lombok.extern.slf4j.Slf4j;
 import ru.smolina.domains.Ingredient;
 import ru.smolina.domains.Ingredient.Type;
-import ru.smolina.repositories.jdbc.IngredientRepository;
-import ru.smolina.repositories.jdbc.TacoRepository;
+import ru.smolina.repositories.jpa.IngredientRepository;
+import ru.smolina.repositories.jpa.TacoRepository;
 import ru.smolina.domains.Order;
 import ru.smolina.domains.Taco;
 
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
